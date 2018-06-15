@@ -8,17 +8,29 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="./styleMaster.css" />
+  <link rel="stylesheet" href="/photos/photosBundleCSS" />
+  <link rel="stylesheet" href="/reviews/reviewsMain.css" />
   <title>Document</title>
 </head>
 <body>
-    <img class="background" src="bg.png" alt="bg" width=1300px>
-  <div class="col-lg-12">
+  <img class="background" src="bg.png" alt="bg" width=1440px>
+  <div class="container-fluid" id="body" >
     <div class="row">
-        <div class="col-lg-7" id="overviewModule"></div>
-      <div class="col-lg-4 sticky-top" id="appReserve"></div>
-
+      <div class="col-lg-1"></div>
+      <div class="col-lg-6">
+        <div id="overviewModule"></div>
+        <div id="bootstrap-overrides" class="row">
+          <div id="photo-service"></div>
+        </div>
+        <div id="menusModule"></div>
+        <div id="reviews"></div>
+      </div> 
+      <div class="col-lg-3 sticky-top" id="appReserve"></div>
     </div>
   </div>
+  <script src="/reviews/reviewsBundle.js"></script>
+  <script src="/photos/photosBundle"></script>
+  <script src="/menus/menusBundle.js"></script>
   <script src="/overviews/overviewsBundle.js"></script>
   <script src="/reservations/dist/reservationsBundle.js"></script> 
 

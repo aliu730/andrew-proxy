@@ -4,20 +4,15 @@ const proxy = require('express-http-proxy');
 
 const app = express();
 
-app.get('/', function(req,res,next) {
-  console.log(req.url);
+app.use('/', function(req,res,next) {
+  console.log("PROXY ROUTE", req.url);
   next();
 });
 
 app.use('/restaurant/:restaurant_id', express.static(__dirname + '/public'));
 
-app.get('/reservations/restaurant/:restaurant_id', function(req,res,next) {
-  console.log(req.url);
-  next();
-})  
-
 app.use('/reservations', proxy("http://localhost:3001"));
-
+app.use('/overviews', proxy("http://localhost:3003"));
 app.listen(3000, function() {
   console.log("listening to 3000");
 });
